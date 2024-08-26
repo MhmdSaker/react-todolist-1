@@ -29,6 +29,7 @@ const NewCardForm = ({ onAddCard }) => {
     }
   };
 
+  
   return (
     
     <form onSubmit={handleSubmit} className=" bg-white rounded-lg shadow-lg mt-[40px]">

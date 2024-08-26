@@ -2,29 +2,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import Card from './components/Card';
 import NewCardForm from './components/NewCardForm';
+import LoginForm from './components/LoginForm'
 import './App.css';
+import cardData from './data/cards.json';  // Import the JSON data
+
+
 
 const App = () => {
-  const [cards, setCards] = useState([
-    {
-      title: 'Today Work',
-      tasks: [
-        { name: 'research', label: 'Research' },
-        { name: 'moodboard', label: 'Moodboard' },
-        { name: 'lofi', label: 'Lofi Design' },
-      ],
-      date: 'Sat, 25 Mar 23',
-    },
-    {
-      title: 'Tomorrow Work',
-      tasks: [
-        { name: 'planning', label: 'Project Planning' },
-        { name: 'design', label: 'UI Design' },
-        { name: 'coding', label: 'Coding' },
-      ],
-      date: 'Sun, 26 Mar 23',
-    },
-  ]);
+  const [cards, setCards] = useState(cardData);
 
   const [showForm, setShowForm] = useState(false);
   const formRef = useRef(null);
@@ -59,7 +44,7 @@ const App = () => {
           ease: "power2.in",
           onComplete: () => {
             // Component is now fully invisible
-            // ShowForm is already false here, so we don't need to set it again
+            // ShowForm is already false here, so   we don't need to set it again
           }
         });
       }
@@ -91,11 +76,13 @@ const App = () => {
         </button>
       </div>
       <hr />
+      
       {showForm && (
         <div ref={formRef} style={{ opacity: 0 }}>
           <NewCardForm onAddCard={addCard} />
         </div>
       )}
+
       <div className="flex flex-wrap gap-4 mt-10">
         {cards.map((card, index) => (
           <Card
@@ -107,7 +94,10 @@ const App = () => {
           />
         ))}
       </div>
+
+
     </div>
+
   );
 };
 

@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Today Work",
+      "tasks": [
+        { "name": "research", "label": "Research" },
+        { "name": "moodboard", "label": "Moodboard" },
+        { "name": "lofi", "label": "Lofi Design" }
+      ],
+      "date": "Sat, 25 Mar 23"
+    },
+    {
+      "title": "Tomorrow Work",
+      "tasks": [
+        { "name": "planning", "label": "Project Planning" },
+        { "name": "design", "label": "UI Design" },
+        { "name": "coding", "label": "Coding" }
+      ],
+      "date": "Sun, 26 Mar 23"
+    }
+  ]
+  
